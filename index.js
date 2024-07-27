@@ -84,3 +84,40 @@ $(document).ready(function(){
     
           window.open(whatsappLink);
       });
+
+
+
+
+      //animation
+      const scrollRevealOption = {
+        distance: "50px",
+        origin: "bottom",
+        duration: 1000,
+      };
+      const scrollRevealOption1 = {
+        distance: "50px",
+        origin: "top",
+        duration: 1000,
+      };
+      const scrollRevealOption2 = {
+        distance: "50px",
+        origin: "right",
+        duration: 1000,
+      };
+      const scrollRevealOption3 = {
+        distance: "50px",
+        origin: "left",
+        duration: 1000,
+      };
+      ScrollReveal().reveal(".anim1", { ...scrollRevealOption });
+      ScrollReveal().reveal(".anim2", { ...scrollRevealOption , delay: 500});
+      ScrollReveal().reveal(".anim3", { ...scrollRevealOption,delay:1000 });
+      ScrollReveal().reveal(".popular__card", { ...scrollRevealOption,interval:500 });
+      // ScrollReveal().reveal(".talent__card", { ...scrollRevealOption3,interval:500 });
+      // ScrollReveal().reveal(".talent__card", { ...scrollRevealOption1,interval:500 });
+      // ScrollReveal().reveal(".talent__card", { ...scrollRevealOption2,interval:500 });
+      ScrollReveal().reveal(".talent__card", { ...scrollRevealOption,interval:500 });
+      // ScrollReveal().reveal(".talent__card", { ...scrollRevealOption2,interval:500 });
+      ScrollReveal().reveal(".register__image img", { ...scrollRevealOption2,delay:300 });
+      ScrollReveal().reveal(".register__content h4", { ...scrollRevealOption,delay:700 });
+      ScrollReveal().reveal(".register__btn", { ...scrollRevealOption,delay:1000 });
