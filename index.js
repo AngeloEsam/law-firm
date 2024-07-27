@@ -46,7 +46,7 @@ $(document).ready(function(){
 
   //section 13
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -65,6 +65,22 @@ $(document).ready(function(){
         },
         640: {
             slidesPerView: 1,
+        },
+        320: {
+            slidesPerView: 1,
         }
     }
 });
+
+//contact us
+
+    document.getElementById("submitButton").addEventListener("click", function() {
+          var companyName = document.getElementById("companyName").value;
+          var fullName = document.getElementById("fullName").value;
+          var email = document.getElementById("email").value;
+          var phone = document.getElementById("phone").value;
+          
+          var whatsappLink = "https://wa.me/966500518950?text=اسم الشركة: " + companyName + "%0D%0Aالاسم الكامل: " + fullName + "%0D%0Aعنوان البريد الإلكتروني: " + email + "%0D%0Aرقم الهاتف: " + phone;
+    
+          window.open(whatsappLink);
+      });

@@ -14,6 +14,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
@@ -603,31 +607,33 @@ button.next {
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
         }
 
-        .swiper-slide .step-number {
-            width: 30px;
-            height: 30px;
-            color: white;
-            background-color: #289298f2;
-            position: absolute;
-            top: 20px;
-            right: 20px;
+        .swiper-slide .stars {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
+            justify-content: space-between;
+            width: 100%;
         }
 
-        .swiper-slide h3 {
-            margin: 10px 0;
-            font-size: 1.5em;
+        .swiper-slide .stars h3 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .swiper-slide .stars .fa-star {
+            margin-left: 5px;
         }
 
         .swiper-slide p {
             margin: 10px 0;
             font-size: 1em;
+        }
+
+        .swiper-slide .quote-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
@@ -643,6 +649,73 @@ button.next {
                 font-size: 0.9em;
             }
         }
+        .section14 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* .contact-form, .contact-info {
+    width: 45%;
+} */
+.contact-form{
+  flex: 1;
+}
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #164a7d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contact-info h2, .contact-info h3 {
+    margin: 0 0 10px;
+}
+
+.contact-info p {
+    margin: 0 0 20px;
+}
+
+.social-media {
+  flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media img {
+    width: 90%;
+    height:auto;
+}
     </style>
   </head>
   <body>
@@ -1447,7 +1520,7 @@ button.next {
 <div class="section12">
   <img src="img/rectangle-1-2.png" height="500px" width="100%" alt="img">
 </div>
-<div class="section13 mx-5">
+<div class="section13">
   <div class="team-section">
       <div class="header">
           <h1 style="text-align: right;">قصص نجاح العملاء</h1>
@@ -1456,33 +1529,106 @@ button.next {
       <div class="swiper-container">
           <div class="swiper-wrapper">
               <div class="swiper-slide">
-                 
-                  <h3>عبدالله العسيري</h3>
-                  <span><i class="ri-double-quotes-r"></i></span>
+                  <div class="stars">
+                      <div>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                      </div>
+                      <h3>عبدالله العسيري</h3>
+                  </div>
+                  <span class="quote-icon" ><i class="ri-double-quotes-r"></i></span>
                   <p>شهادة أمام الله أنه من أفضل المحاميات أمانة وخلق وإيضاح وبيان، ولا أنسى مدير المكتب عبدالله الشهري قمة في الأخلاق ومتابعة الموضوع أول بأول.</p>
               </div>
               <div class="swiper-slide">
-                  
-                  <h3 style="text-align: right;">نجود المساعد</h3>
-                  <p style="text-align: right;">من أروع المحاميات وأفضلهم وبيشهد الله على ما أقول. صاحبة حكمة ودراية ذات قلم قوي وواضح في كتابة الصحائف والمذكرات. أنا فخورة فيها. يبدع الله خطاكِ يا أستاذة نوال.</p>
+                  <div class="stars">
+                      <div>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                      </div>
+                      <h3>نجود المساعد</h3>
+                  </div>
+                  <span class="quote-icon"><i class="ri-double-quotes-r"></i></span>
+                  <p>من أروع المحاميات وأفضلهم وبيشهد الله على ما أقول. صاحبة حكمة ودراية ذات قلم قوي وواضح في كتابة الصحائف والمذكرات. أنا فخورة فيها. يبدع الله خطاكِ يا أستاذة نوال.</p>
               </div>
               <div class="swiper-slide">
-                 
-                  <h3 style="text-align: right;">أبو نواف المالكي</h3>
-                  <p style="text-align: right;">إبداع في صياغة الردود والمعرفة بتفاصيل الأنظمة والمصطلحات القضائية. بفضل الله ثم بجهودها تم رد الدعوى المقامة ضدي. أتمنى لها التوفيق.</p>
+                  <div class="stars">
+                      <div>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                      </div>
+                      <h3>أبو نواف المالكي</h3>
+                  </div>
+                  <span class="quote-icon"><i class="ri-double-quotes-r"></i></span>
+                  <p>إبداع في صياغة الردود والمعرفة بتفاصيل الأنظمة والمصطلحات القضائية. بفضل الله ثم بجهودها تم رد الدعوى المقامة ضدي. أتمنى لها التوفيق.</p>
               </div>
               <div class="swiper-slide">
-                 
-                  <h3 style="text-align: right;">عبدالله العسيري</h3>
-                  <p style="text-align: right;">شهادة أمام الله أنه من أفضل المحاميات أمانة وخلق وإيضاح وبيان، ولا أنسى مدير المكتب عبدالله الشهري قمة في الأخلاق ومتابعة الموضوع أول بأول.</p>
+                  <div class="stars">
+                      <div>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                          <i class="fa-solid fa-star" style="color: yellow;"></i>
+                      </div>
+                      <h3>عبدالله العسيري</h3>
+                  </div>
+                  <span class="quote-icon"><i class="ri-double-quotes-r"></i></span>
+                  <p>شهادة أمام الله أنه من أفضل المحاميات أمانة وخلق وإيضاح وبيان، ولا أنسى مدير المكتب عبدالله الشهري قمة في الأخلاق ومتابعة الموضوع أول بأول.</p>
               </div>
           </div>
           <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
+          <!-- <div class="swiper-pagination"></div> -->
           <!-- Add Navigation -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-button-next"></div> -->
+          <!-- <div class="swiper-button-prev"></div> -->
       </div>
+  </div>
+</div>
+<div class="section14">
+  <div class="contact-form" dir="rtl">
+      <div class="form-group">
+          <label for="companyName">اسم الشركه </label>
+          <input type="text" id="companyName" placeholder=" اسمك الشركه">
+      </div>
+      <div class="form-group">
+          <label for="full-name">الاسم الكامل</label>
+          <input type="text" id="fullName" placeholder="ادخل اسمك كاملا">
+      </div>
+      <div class="form-group">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" placeholder="ادخل البريد الإلكتروني">
+      </div>
+      <div class="form-group">
+          <label for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" placeholder="ادخل رقم الهاتف">
+      </div>
+      <div class="form-group">
+          <label for="service">اختيار نوع الخدمة</label>
+          <select id="service">
+              <option>اختر نوع الخدمة</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="subject">عنوان الموضوع</label>
+          <input type="text" id="subject" placeholder="ادخل عنوان الموضوع">
+      </div>
+      <div class="form-group">
+          <label for="message">رسالة الموضوع</label>
+          <textarea id="message" placeholder="اكتب الرسالة"></textarea>
+      </div>
+      <button type="submit" id="submitButton">ارسال</button>
+  </div>     
+  <div class="social-media">
+      <img src="img/frame-46.png" alt="Social Media Icons">
   </div>
 </div>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
