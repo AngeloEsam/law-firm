@@ -27,39 +27,76 @@
 
     <title>Law Firm</title>
     <style>
+     
       /* Custom CSS */
-      .carousel-indicators {
+      .carousel{
         position: relative;
-        bottom: 10px; /* Adjust as needed */
-        left: 40%;
-        transform: translateX(-50%);
-        display: flex;
-
-        z-index: 1000; /* Ensure it is above other content */
-        top: 52em;
       }
+      .carousel-item img {
+            width: 100vw; /* عرض كامل للشاشة */
+            height: 121vh; /* ارتفاع كامل للشاشة */
+            object-fit: cover; /* ملء الصورة بدون تشويه */
+        }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+          position: absolute;
+          bottom: 50%;
+        }
+        .carousel-caption h5, .carousel-caption p {
+            color: #fff;
+        }
+        .carousel-caption .btn {
+            margin: 5px;
+        }
+        .carousel-indicators {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            display: flex;
+          
+        }
+        .carousel-indicators button {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .carousel-indicators .active {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        @media (max-width: 768px) {
+           .carousel {
+                height:100%;
+            }
+            .carousel-item img {
+            width: 100vw; /* عرض كامل للشاشة */
+            height: 121vh; /* ارتفاع كامل للشاشة */
+            object-fit: cover; /* ملء الصورة بدون تشويه */
+        }
+            .carousel-caption {
+                width: 90%;
+                font-size: 14px;
+                padding: 5px;
+                bottom: 50%;
+            }
+            .carousel-caption h5 {
+                font-size: 18px;
+            }
+            .carousel-caption p {
+                font-size: 12px;
+            }
+            .carousel-caption .btn {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+        }
       .navbar .text-wrapper-3 {
         text-decoration: none;
       }
       .text-wrapper1 {
         text-decoration: none;
       }
-      .carousel-indicators button {
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* Adjust color and opacity as needed */
-      }
-      .carousel-indicators .active {
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.9
-        ); /* Adjust color and opacity as needed */
-      }
+      
       @media  (max-width:600px) {
         .section4{
           max-width: 90% !important;
@@ -716,6 +753,47 @@ button.next {
     width: 90%;
     height:auto;
 }
+@media (max-width: 768px) { 
+  .section14{
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+} 
+.up{
+  position: fixed;
+  bottom: 15px;
+  right: -45px;
+  background-color: #0c6062de;
+  font-weight: bold;
+  /* font-size: 10px; */
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
+.show{
+    right:2.5rem;
+}
+.watts{
+  position: fixed;
+  bottom: 15px;
+  left: 2.5rem;
+  background-color: rgb(21, 197, 21);
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
     </style>
   </head>
   <body>
@@ -797,355 +875,88 @@ button.next {
     </div>
 
     <!-- Carousel Code Starts Here -->
-    <div
-      id="myCarousel"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      style="display: none;"
-    >
+    <div id="myCarousel" class="carousel slide three" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="3"
-          aria-label="Slide 4"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="4"
-          aria-label="Slide 5"
-        ></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
       </div>
 
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="desktop">
-            <div class="div">
-              <div class="overlap-group">
-                <div class="component">
-                  <img class="image" src="img/image-2.png" alt="Office" />
-                </div>
-                <div class="frame">
-                  <div class="frame-2">
-                    <div class="frame-3">
-                      <p class="p">
-                        <span class="text-wrapper"
-                          >مكتب الاستاذة&nbsp;&nbsp;</span
-                        >
-                        <span class="span">نوال البكري</span>
-                        <span class="text-wrapper"> للمحامة </span>
-                      </p>
-                    </div>
-                    <p class="text-wrapper-2">
-                      لا تترددوا في طرق أبوابنا للحصول على المشورة القانونية
-                      المتخصصة. نحن هنا لتقديم الدعم الكامل والمشورة التي
-                      تحتاجونها لحماية مصالحكم.
-                    </p>
-                  </div>
-                  <div class="frame-4">
-                    <button
-                      class="button"
-                      onclick="window.location.href='https://wa.me/1234567890';"
-                    >
-                      <div class="text-wrapper-3">واتساب</div>
-                    </button>
-                    <a href="tel:+1234567890" class="div-wrapper">
-                      <div class="text-wrapper-3">اتصال مباشر</div>
-                    </a>
-                    <button
-                      class="button-2"
-                      onclick="window.location.href='booking.html';"
-                    >
-                      <div class="text-wrapper-4">احجز استشارتك</div>
-                    </button>
-                  </div>
-                </div>
-                <div class="frame-5">
-                  <div class="frame-6">
-                    <div class="component-2">
-                      <img
-                        class="rectangle"
-                        src="img/rectangle-4.png"
-                        alt="Cases"
-                      />
-                      <div class="frame-3">
-                        <div class="element">+1000</div>
-                        <div class="text-wrapper-5">قـضـــــــــيـة</div>
-                      </div>
-                    </div>
-                    <div class="component-2">
-                      <img
-                        class="rectangle"
-                        src="img/rectangle-4-1.png"
-                        alt="Employees"
-                      />
-                      <div class="frame-3">
-                        <div class="element">+25</div>
-                        <div class="text-wrapper-5">مـوظــــــــف</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="frame-6">
-                    <div class="component-2">
-                      <img
-                        class="rectangle"
-                        src="img/rectangle-4-2.png"
-                        alt="Consultations"
-                      />
-                      <div class="frame-3">
-                        <div class="element">+5000</div>
-                        <div class="text-wrapper-5">إستـشـــــارات</div>
-                      </div>
-                    </div>
-                    <div class="component-3">
-                      <img
-                        class="rectangle"
-                        src="img/rectangle-4-3.png"
-                        alt="Satisfied Clients"
-                      />
-                      <div class="frame-3">
-                        <div class="element">+4500</div>
-                        <div class="text-wrapper-5">عــمــــيل راضــــي</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <div class="carousel-inner" style="width: 100vw; height: 100vh;">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+              <img class="d-block w-100" src="img/image-2.png" alt="First slide">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>مكتب الاستاذة نوال البكري للمحامة</h5>
+                  <p>لا تترددوا في طرق أبوابنا للحصول على المشورة القانونية المتخصصة. نحن هنا لتقديم الدعم الكامل والمشورة التي تحتاجونها لحماية مصالحكم.</p>
+                  <a href="https://wa.me/1234567890" class="btn btn-primary">واتساب</a>
+                  <a href="tel:+1234567890" class="btn btn-secondary">اتصال مباشر</a>
+                  <a href="booking.html" class="btn btn-success">احجز استشارتك</a>
               </div>
-            </div>
           </div>
-        </div>
-        <!-- Slide 2 Content Here -->
-        <div class="carousel-item">
-          <div class="desktop">
-            <div class="div">
-              <div class="overlap-group">
-                <div class="component">
-                  <img class="image" src="img/slider2.png" alt="Office" />
-                </div>
-                <div class="frame">
-                  <div class="frame-2">
-                    <div class="frame-3">
-                      <p class="p">
-                        <span class="text-wrapper">مستشارك &nbsp;&nbsp;</span>
-                        <span class="span"> القانوني</span>
-                        <span class="text-wrapper"> لحماية حقوقك </span>
-                      </p>
-                    </div>
-                    <p class="text-wrapper-2">
-                      لا تترددوا في طرق أبوابنا للحصول على المشورة القانونية
-                      المتخصصة. نحن هنا لتقديم الدعم الكامل والمشورة التي
-                      تحتاجونها لحماية مصالحكم واتخاذ القرارات الصائبة. بفضل
-                      خبرتنا الواسعة، سنساعدكم في مواجهة التحديات القانونية بثقة
-                      واطمئنان.
-                    </p>
-                  </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+              <img class="d-block w-100" src="img/slider2.png" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>مستشارك القانوني لحماية حقوقك</h5>
+                  <p>لا تترددوا في طرق أبوابنا للحصول على المشورة القانونية المتخصصة. نحن هنا لتقديم الدعم الكامل والمشورة التي تحتاجونها لحماية مصالحكم واتخاذ القرارات الصائبة. بفضل خبرتنا الواسعة، سنساعدكم في مواجهة التحديات القانونية بثقة واطمئنان.</p>
+                  <a href="https://wa.me/1234567890" class="btn btn-primary">واتساب</a>
+                  <a href="tel:+1234567890" class="btn btn-secondary">اتصال مباشر</a>
+                  <a href="booking.html" class="btn btn-success">احجز استشارتك</a>
+              </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+              <img class="d-block w-100" src="img/slider3.png" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>نقدم لكم باقة واسعة من الخدمات الاستشارية</h5>
+                  <p>تصحيح الأوضاع القانونية قبل فوات الأوان. دعونا نساعدكم في اتخاذ الخطوات القانونية الصحيحة.</p>
+                  <a href="https://wa.me/1234567890" class="btn btn-primary">واتساب</a>
+                  <a href="tel:+1234567890" class="btn btn-secondary">اتصال مباشر</a>
+                  <a href="booking.html" class="btn btn-success">احجز استشارتك</a>
+              </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="carousel-item">
+              <img class="d-block w-100" src="img/slider4.png" alt="Fourth slide">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>رسالتنا السعي وراء الحق حيثما كان</h5>
+                  <p>مستشارك القانوني في المملكة العربية السعودية. نحن نؤمن بالعدالة ونسعى لتحقيقها بكل جهد.</p>
+                  <a href="https://wa.me/1234567890" class="btn btn-primary">واتساب</a>
+                  <a href="tel:+1234567890" class="btn btn-secondary">اتصال مباشر</a>
+                  <a href="booking.html" class="btn btn-success">احجز استشارتك</a>
+              </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="carousel-item">
+              <img class="d-block w-100" src="img/slider5.png" alt="Fifth slide">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>اختر الخبرة، اختر دارة المشورة</h5>
+                  <p>احصل على أفضل الخدمات القانونية في المملكة. نقدم لك حلاً قانونيًا مبتكرًا بأفضل فريق من المحامين ذوي الكفاءة العالية. دعم قانوني لا مثيل له.</p>
+                  <a href="https://wa.me/1234567890" class="btn btn-primary">واتساب</a>
+                  <a href="tel:+1234567890" class="btn btn-secondary">اتصال مباشر</a>
+                  <a href="booking.html" class="btn btn-success">احجز استشارتك</a>
+              </div>
+          </div>
+      </div>
 
-                  <div class="frame-4">
-                    <button
-                      class="button"
-                      onclick="window.location.href='https://wa.me/1234567890';"
-                    >
-                      <div class="text-wrapper-3">واتساب</div>
-                    </button>
-                    <a href="tel:+1234567890" class="div-wrapper">
-                      <div class="text-wrapper-3">اتصال مباشر</div>
-                    </a>
-                    <button
-                      class="button-2"
-                      onclick="window.location.href='booking.html';"
-                    >
-                      <div class="text-wrapper-4">احجز استشارتك</div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3 Content Here -->
-        <div class="carousel-item">
-          <div class="desktop">
-            <div class="div">
-              <div class="overlap-group">
-                <div class="component">
-                  <img class="image" src="img/slider3.png" alt="Office" />
-                </div>
-                <div class="frame">
-                  <div class="frame-2">
-                    <div class="frame-3">
-                      <p class="p">
-                        <span class="text-wrapper">نقدم لكم&nbsp;&nbsp;</span>
-                        <span class="span"> باقة واسعة</span>
-                        <span class="text-wrapper">
-                          من الخدمات الاستشارية
-                        </span>
-                      </p>
-                    </div>
-                    <p class="text-wrapper-2">
-                      تصحيح الأوضاع القانونية قبل فوات الأوان. دعونا نساعدكم في
-                      اتخاذ الخطوات القانونية الصحيحة.
-                    </p>
-                  </div>
-                  <div class="frame-4">
-                    <button
-                      class="button"
-                      onclick="window.location.href='https://wa.me/1234567890';"
-                    >
-                      <div class="text-wrapper-3">واتساب</div>
-                    </button>
-                    <a href="tel:+1234567890" class="div-wrapper">
-                      <div class="text-wrapper-3">اتصال مباشر</div>
-                    </a>
-                    <button
-                      class="button-2"
-                      onclick="window.location.href='booking.html';"
-                    >
-                      <div class="text-wrapper-4">احجز استشارتك</div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 4 Content Here -->
-        <div class="carousel-item">
-          <div class="desktop">
-            <div class="div">
-              <div class="overlap-group">
-                <div class="component">
-                  <img class="image" src="img/slider4.png" alt="Office" />
-                </div>
-                <div class="frame">
-                  <div class="frame-2">
-                    <div class="frame-3">
-                      <p class="p">
-                        <span class="text-wrapper">رسالتنا &nbsp;&nbsp;</span>
-                        <span class="span"> السعي وراء الحق</span>
-                        <span class="text-wrapper"> حيثما كان </span>
-                      </p>
-                    </div>
-                    <p class="text-wrapper-2">
-                      مستشارك القانوني في المملكة العربية السعودية. نحن نؤمن
-                      بالعدالة ونسعى لتحقيقها بكل جهد.
-                    </p>
-                  </div>
-                  <div class="frame-4">
-                    <button
-                      class="button"
-                      onclick="window.location.href='https://wa.me/1234567890';"
-                    >
-                      <div class="text-wrapper-3">واتساب</div>
-                    </button>
-                    <a href="tel:+1234567890" class="div-wrapper">
-                      <div class="text-wrapper-3">اتصال مباشر</div>
-                    </a>
-                    <button
-                      class="button-2"
-                      onclick="window.location.href='booking.html';"
-                    >
-                      <div class="text-wrapper-4">احجز استشارتك</div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 5 Content Here -->
-        <div class="carousel-item">
-          <div class="desktop">
-            <div class="div">
-              <div class="overlap-group">
-                <div class="component">
-                  <img class="image" src="img/slider5.png" alt="Office" />
-                </div>
-                <div class="frame">
-                  <div class="frame-2">
-                    <div class="frame-3">
-                      <p class="p">
-                        <span class="text-wrapper">اختر &nbsp;&nbsp;</span>
-                        <span class="span"> الخبرة</span>
-                        <span class="text-wrapper"> ، اختر </span>
-                        <span class="span"> دارة المشورة </span>
-                      </p>
-                    </div>
-                    <p class="text-wrapper-2">
-                      احصل على أفضل الخدمات القانونية في المملكة. نقدم لك حلاً
-                      قانونيًا مبتكرًا بأفضل فريق من المحامين ذوي الكفاءة
-                      العالية. دعم قانوني لا مثيل له.
-                    </p>
-                  </div>
-                  <div class="frame-4">
-                    <button
-                      class="button"
-                      onclick="window.location.href='https://wa.me/1234567890';"
-                    >
-                      <div class="text-wrapper-3">واتساب</div>
-                    </button>
-                    <a href="tel:+1234567890" class="div-wrapper">
-                      <div class="text-wrapper-3">اتصال مباشر</div>
-                    </a>
-                    <button
-                      class="button-2"
-                      onclick="window.location.href='booking.html';"
-                    >
-                      <div class="text-wrapper-4">احجز استشارتك</div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
+      <button class="carousel-control-prev" style="position: absolute; left: 20px; top: 30%;" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
-        </button>
-
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" style="position: absolute;left: 482%;top: 30%;"  data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"  aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+      </button>
+  </div>
     <!-- after section slider  -->
-    <div class="section4" style="text-align: center;">
-      <div>
+    <div class="section4" style="text-align: center; margin-bottom: 80px;">
+      <div class="section4Left">
         <img class="img" src="img/frame-1-1.svg" width="140px" height="140px" />
       </div>
-      <p class="text-wrapper-8 " style="width: 38%;display: inline-block; align-items: center; margin-top: 8px;">
+      <p class="text-wrapper-8 section4Right" style="width: 38%;display: inline-block; align-items: center; margin-top: 8px;">
         إدراكاً منا لعظمة المهنة التي نعمل بها والرسالة المكلفين بإيصالها كوننا
         حاملي راية الدفاع عن الحقوق، قمنا بإنشاء مكتب المحامية نوال البكري
         للمحاماة والاستشارات القانونية. بفضل نخبة من المحامين والمستشارين
@@ -1155,7 +966,7 @@ button.next {
       </p>
     </div>
     <div class="section5 mx-5 my-2">
-      <div class="flex-1 mt-5">
+      <div class="flex-1 mt-5 xy">
           <h3>من نحن</h3>
           <p>
               مكتب المحامية نوال البكري للمحاماة والاستشارات القانونية هو أحد أبرز المكاتب القانونية في المملكة
@@ -1164,15 +975,15 @@ button.next {
               قيم النزاهة، الاحترافية، والشفافية.
           </p>
       </div>
-      <div class="flex-1">
+      <div class="flex-1 xyz">
           <img src="img/rectangle-1.png" width="700px" ></img>
       </div>
   </div>
   <div class="section6">
    
-    <div class="component-4">
+    <div class="component-4 messageLeft">
         <img class="img-3" src="img/paperplanetilt.svg" />
-        <div class="frame-19">
+        <div class="frame-19 ">
             <div class="frame-20">
                 <div class="text-wrapper-11">رسالتنا</div>
                 <!-- <div class="rectangle-3"></div> -->
@@ -1185,7 +996,7 @@ button.next {
             </p>
         </div>
     </div>
-    <div class="component-4">
+    <div class="component-4 messageCenter">
         <img class="img-3" src="img/eye.svg" />
         <div class="frame-19">
             <div class="frame-20">
@@ -1199,7 +1010,7 @@ button.next {
             </p>
         </div>
     </div>
-    <div class="component-4">
+    <div class="component-4 messageRight">
       <img class="img-3" src="img/scales.svg" />
       <div class="frame-19">
           <div class="frame-20">
@@ -1254,7 +1065,7 @@ button.next {
               </p>
           </div>
       </div>
-      <div class="frame-24">
+      <div class="frame-24 anim4">
           <img src="img/rectangle-3-3.svg" />
           <div class="frame-25">
               <div class="text-wrapper-16">البحث القانوني</div>
@@ -1264,7 +1075,7 @@ button.next {
               </p>
           </div>
       </div>
-      <div class="frame-24">
+      <div class="frame-24 anim5">
           <img src="img/rectangle-3-4.svg" />
           <div class="frame-25">
               <div class="text-wrapper-16">التفاوض والتسويات القانونية</div>
@@ -1274,7 +1085,7 @@ button.next {
               </p>
           </div>
       </div>
-      <div class="frame-24">
+      <div class="frame-24 anim6">
           <img src="img/rectangle-3-5.svg" />
           <div class="frame-25">
               <div class="text-wrapper-16">تقديم التوجيه والتوعية القانونية</div>
@@ -1284,18 +1095,18 @@ button.next {
               </p>
           </div>
       </div>
-      <div class="frame-24">
+      <div class="frame-24 anim7">
           <img src="img/rectangle-3-6.svg" />
           <div class="frame-25">
-              <div class="text-wrapper-16">التمثيل القانوني للشركات والمؤسسات</div>
-              <p class="text-wrapper-17">
-                  تشمل هذه الخدمات التمثيل في القضايا والاستشارات القانونية الدورية، وذلك لضمان حصول الشركات على الدعم
+              <div class="text-wrapper-16">التمثيل القانوني للشركات والمؤسسا>
+                  تشمل هذه الخدمات التمثيل في القضايا والاستشارات القانونية الدورية، وذلك لضمان حصوت</div>
+              <p class="text-wrapper-17"ل الشركات على الدعم
                   القانوني المستمر الذي تحتاجه&nbsp;&nbsp;عبر عقود سنوية، ربع سنوية، ونصف سنوية. هذه الخدمة متوفرة لمن
                   يرغب في التعاقد معنا.
               </p>
           </div>
       </div>
-      <div class="frame-24">
+      <div class="frame-24 anim8">
           <img src="img/rectangle-3-7.svg" />
           <div class="frame-25">
               <div class="text-wrapper-16">التحكيم ووساطة النزاعات</div>
@@ -1305,7 +1116,7 @@ button.next {
               </p>
           </div>
       </div>
-      <div class="frame-24">
+      <div class="frame-24 anim9">
           <img src="img/rectangle-3-8.svg" />
           <div class="frame-25">
               <div class="text-wrapper-16">صياغة الوثائق القانونية</div>
@@ -1396,7 +1207,7 @@ button.next {
   </div>
 </div>
 <div class="section9">
-  <div class="left-section mx-5">
+  <div class="left-section mx-5 left">
       <h1 style="text-align: right; margin-bottom: 25px;">لماذا تختار مكتبنا</h1>
       <p style="text-align: right; margin-bottom: 25px;">نقدم لكم افضل الخدمات في المجال القانوني داخل المملكة العربية السعودية، لكن هل تساءلت يوما، لماذا قد تختارنا؟</p>
       <div class="features">
@@ -1438,7 +1249,7 @@ button.next {
           </div>
       </div>
   </div>
-  <div class="right-section">
+  <div class="right-section right">
     <img class="rectangle-7" src="img/rectangle-1-1.png" />
   </div>
 </div>
@@ -1484,32 +1295,32 @@ button.next {
           <h1 style="text-align: right; margin-right: 20px;">إجراءات التعاقد</h1>
       </div>
       <div class="grid-container">
-          <div class="grid-item">
+          <div class="grid-item x1">
               <div class="step-number">1</div>
               <h3 style="text-align: right;">التواصل الأول</h3>
               <p style="text-align: right;">يقوم العميل بالتواصل بنا عبر إيميلنا أو الموقع لتحديد موعد الاجتماع الأول.</p>
           </div>
-          <div class="grid-item">
+          <div class="grid-item x2">
             <div class="step-number">2</div>
               <h3 style="text-align: right;">الاجتماع الأول وتقييم الحالة</h3>
               <p style="text-align: right;">نجتمع مع العميل لفهم احتياجاته القانونية وتقييم حالته بناءً على الوثائق والمعلومات المقدمة.</p>
           </div>
-          <div class="grid-item">
+          <div class="grid-item x3">
             <div class="step-number">3</div>
               <h3 style="text-align: right;">تقديم عرض الخدمة وإبرام العقد</h3>
               <p style="text-align: right;">نقدم عرضاً للخدمات المطلوبة وبعد الموافقة نوقع العقد، يتضمن نقل الأعمال والتكاليف والجدول الزمني.</p>
           </div>
-          <div class="grid-item">
+          <div class="grid-item x4">
             <div class="step-number">4</div>
               <h3 style="text-align: right;">تنفيذ العمل القانوني</h3>
               <p style="text-align: right;">نبدأ في تنفيذ الخدمات المتفق عليها مع متابعة دورية وتحديثات للعميل.</p>
           </div>
-          <div class="grid-item">
+          <div class="grid-item x5">
             <div class="step-number">5</div>
               <h3 style="text-align: right;">المراجعة وإتمام الخدمة</h3>
               <p style="text-align: right;">نراجع العمل المنجز ونتأكد من التزامه بالمعايير المطلوبة، ثم نفحص تقريرنا النهائي للعميل.</p>
           </div>
-          <div class="grid-item">
+          <div class="grid-item x6">
             <div class="step-number">6</div>
               <h3 style="text-align: right;">الدعم المستمر</h3>
               <p style="text-align: right;">نواصل تقديم الدعم للعميل حتى بعد إتمام الخدمة للإجابة على أي استفسارات أو تقديم نصائح إضافية.</p>
@@ -1593,8 +1404,8 @@ button.next {
       </div>
   </div>
 </div>
-<div class="section14">
-  <div class="contact-form" dir="rtl">
+<div class="section14 four">
+  <div class="contact-form xx" dir="rtl">
       <div class="form-group">
           <label for="companyName">اسم الشركه </label>
           <input type="text" id="companyName" placeholder=" اسمك الشركه">
@@ -1627,12 +1438,16 @@ button.next {
       </div>
       <button type="submit" id="submitButton">ارسال</button>
   </div>     
-  <div class="social-media">
+  <div class="social-media yy">
       <img src="img/frame-46.png" alt="Social Media Icons">
   </div>
 </div>
+<span class="up"><i class="ri-arrow-up-s-line" style="font-size: 20px;"></i></span>
+<a href="https://wa.me/1234567890"><span class="watts"><i class="fa-brands fa-whatsapp"></i></span></a>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://unpkg.com/scrollreveal"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
