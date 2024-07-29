@@ -125,7 +125,7 @@
             width: 100%; /* Reset width to 100% */
         }
 
-        .section5 img {
+        .section5 video {
             width: 100%; /* Ensure iframe takes full width of its container */
             height: auto; /* Adjust height to maintain aspect ratio */
         }
@@ -794,6 +794,140 @@ button.next {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
 }
+/* section 15 style */
+/* .section15 {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    min-width: 280px;
+    max-width: 33%;
+    box-sizing: border-box;
+}
+
+.text-wrapper {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.frame-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.frame-3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-wrapper-2 {
+    text-decoration: none;
+    color: #333;
+}
+
+.text-wrapper-2.active {
+    font-weight: bold;
+}
+
+.caret-left {
+    width: 16px;
+    height: 16px;
+}
+
+.law-office-info {
+    flex: 1 100%;
+    margin-top: 20px;
+}
+
+.law-office-info p {
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.logo-container img {
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    .column {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .law-office-info p {
+        font-size: 14px;
+    }
+
+    .logo-container img {
+        width: 80px;
+    }
+} */
+ .section15 a{
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+ }
+ .section15 i{
+    font-size: 22px;
+    color: black;
+ }
+ @media (max-width: 768px) {
+    .content{
+        flex-direction: column;
+        gap: 10px;
+  
+    }
+    .hh{
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+    }
+ }
+ .footer{
+    background-color: rgb(21, 20, 20);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ @media (max-width: 768px) {
+    .footer{
+        flex-direction: column-reverse;
+        gap: 3px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        align-items: center;
+        font-size: 12px;
+    }
+ }
     </style>
   </head>
   <body>
@@ -965,7 +1099,7 @@ button.next {
         وتجاربنا.
       </p>
     </div>
-    <div class="section5 mx-5 my-2">
+    <div class="section5 mx-4 my-2" >
       <div class="flex-1 mt-5 xy">
           <h3>من نحن</h3>
           <p>
@@ -976,7 +1110,10 @@ button.next {
           </p>
       </div>
       <div class="flex-1 xyz">
-          <img src="img/rectangle-1.png" width="700px" ></img>
+        <video width="600px" controls>
+                <source src="img/video.mp4" type="video/mp4">
+               
+        </video>
       </div>
   </div>
   <div class="section6">
@@ -1441,6 +1578,105 @@ button.next {
   <div class="social-media yy">
       <img src="img/frame-46.png" alt="Social Media Icons">
   </div>
+</div>
+<div class="section15 me-5">
+    <div class="content gap-3 d-flex" style="flex-direction: row-reverse; flex-wrap: wrap;">
+        <div class="logo-container">
+            <img src="img/1.png" alt="Law Office Logo" width="60px" height="60px">
+        </div>
+        <div class="law-office-info" dir="rtl">
+            <p dir="rtl">مكتب المحامية نوال البكري للمحاماة والاستشارات القانونية هو أحد أبرز
+                <br>
+                المكاتب القانونية في المملكة العربية السعودية حيث نسعى لتقديم
+                <br>
+                خدمات قانونية عالية الجودة تضم مجموعة واسعة من التخصصات 
+                <br>
+                القانونية. تأسس مكتبنا من قبل المحامية نوال البكري مع التزام تام بتحقيق العدالة وتوفير الدعم 
+                <br>
+                القانوني الأمثل لعملائنا مستندين على قيم النزاهة الاحترافية والشفافية.</p>
+                <div class="social-links" dir="rtl">
+                    <a
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      class="social-icon"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="https://x.com/nwal_lawyer"
+                      target="_blank"
+                      class="social-icon"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      class="social-icon"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href="http://wa.me/966551161140"
+                      target="_blank"
+                      class="social-icon"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+        </div>
+       <div class="d-flex gap-3 hh justify-content-between">
+        <div class="column" dir="rtl">
+            <h5 class="text-wrapper">نظرة عامة</h5>
+            <div class="frame-2">
+                <div class="frame-3">
+                    <img class="caret-left" src="img/caretleft-6.svg" />
+                    <a href="#contact" class="text-wrapper-2">تواصل معنا</a>
+                </div>
+                <div class="frame-3">
+                    <img class="caret-left" src="img/caretleft-6.svg" />
+                    <a href="#success-stories" class="text-wrapper-2">قصص نجاح العملاء</a>
+                </div>
+                <div class="frame-3">
+                    <img class="caret-left" src="img/caretleft-6.svg" />
+                    <a href="#team" class="text-wrapper-2">فريق العمل</a>
+                </div>
+                <div class="frame-3">
+                    <img class="caret-left" src="img/caretleft-6.svg" />
+                    <a href="#about" class="text-wrapper-2">نبذة عنا</a>
+                </div>
+            </div>
+        </div>
+        <div class="column" dir="rtl">
+            <h5 class="text-wrapper">كيف نعمل</h5>
+            <div class="frame-2">
+                <div class="frame-3">
+                    <img class="caret-left" src="img/caretleft-2.svg" />
+                    <a href="#contract" class="text-wrapper-2 active">إجراءات التعاقد</a>
+                </div>
+                <div class="frame-3">
+                    <img class="caret-left" src="img/caretleft-2.svg" />
+                    <a href="#why-us" class="text-wrapper-2">لماذا تختار مكتبنا</a>
+                </div>
+                <div class="frame-3">
+                    <img class="caret-left" src="img/caretleft-2.svg" />
+                    <a href="#services" class="text-wrapper-2">خدماتنا القانونية</a>
+                </div>
+            </div>
+        </div>
+       </div>
+        <div class="column " dir="rtl">
+            <h5 class="text-wrapper">الموقع الجغرافي</h5>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14488.216733910254!2d46.7741065!3d24.7935981!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2eff003d425f1d%3A0x240012a4d6da4f98!2z2YXZg9iq2Kgg2KfZhNmF2K3Yp9mF2YrYqSDZhtmI2KfZhCDYp9mE2KjZg9ix2Yo!5e0!3m2!1sar!2ssa!4v1722110252015!5m2!1sar!2ssa" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="footer px-5">
+    <div class="text-wrapper-42">تصميم وبرمجة آير منيو</div>
+    <p class="text-wrapper-43">2024 © جميع الحقوق محفوظة لمكتب الاستاذة نوال للمحاماة</p> 
 </div>
 <span class="up"><i class="ri-arrow-up-s-line" style="font-size: 20px;"></i></span>
 <a href="https://wa.me/1234567890"><span class="watts"><i class="fa-brands fa-whatsapp"></i></span></a>

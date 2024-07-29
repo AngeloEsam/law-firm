@@ -136,11 +136,11 @@ const scrollRevealOption3 = {
 ScrollReveal().reveal(".anim1", { ...scrollRevealOption });
 ScrollReveal().reveal(".anim2", { ...scrollRevealOption, delay: 500 });
 ScrollReveal().reveal(".anim3", { ...scrollRevealOption, delay: 1000 });
-ScrollReveal().reveal(".anim4", { ...scrollRevealOption, delay: 1500 });
-ScrollReveal().reveal(".anim5", { ...scrollRevealOption, delay: 2000 });
-ScrollReveal().reveal(".anim6", { ...scrollRevealOption, delay: 2500 });
-ScrollReveal().reveal(".anim7", { ...scrollRevealOption, delay: 2800 });
-ScrollReveal().reveal(".anim8", { ...scrollRevealOption, delay: 3100 });
+ScrollReveal().reveal(".anim4", { ...scrollRevealOption, delay: 1400 });
+ScrollReveal().reveal(".anim5", { ...scrollRevealOption, delay: 1800 });
+ScrollReveal().reveal(".anim6", { ...scrollRevealOption, delay: 2100 });
+ScrollReveal().reveal(".anim7", { ...scrollRevealOption, delay: 2500 });
+ScrollReveal().reveal(".anim8", { ...scrollRevealOption, delay: 2900 });
 ScrollReveal().reveal(".anim9", { ...scrollRevealOption, delay: 3300 });
 ScrollReveal().reveal(".x1", { ...scrollRevealOption });
 ScrollReveal().reveal(".x2", { ...scrollRevealOption, delay: 500 });
