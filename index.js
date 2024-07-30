@@ -106,6 +106,7 @@ window.onscroll=function(){
 
 spanElement.onclick = function() {
     window.scrollTo({
+      duration:3000,
         top: 0,
         behavior: 'smooth'
     });

@@ -689,14 +689,15 @@ button.next {
         .section14 {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 70px;
 }
 
-/* .contact-form, .contact-info {
-    width: 45%;
-} */
 .contact-form{
-  flex: 1;
+           flex: 1;
+           display: flex;
+            flex-wrap: wrap; gap: 20px;
+            justify-content: space-between;
+           flex-direction: row-reverse;
 }
 .contact-form .form-group {
     margin-bottom: 15px;
@@ -717,23 +718,23 @@ button.next {
 .contact-form button {
     width: 100%;
     padding: 10px;
-    background-color: #164a7d;
+    background: linear-gradient(93deg, #14A9AC -95.72%, #194B6A 102.84%);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.contact-form button:hover {
-    background-color: #0056b3;
-}
+
 
 .contact-info {
-    background-color: #003366;
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-}
+            flex: 1;
+            background-color: #1D2D50;
+            color: white;
+            padding-right: 50px;
+            padding-top: 40px;
+            border-radius: 10px;
+        }
 
 .contact-info h2, .contact-info h3 {
     margin: 0 0 10px;
@@ -753,12 +754,24 @@ button.next {
     width: 90%;
     height:auto;
 }
-@media (max-width: 768px) { 
-  .section14{
-    flex-direction: column-reverse;
-    gap: 20px;
-  }
-} 
+@media (max-width: 768px) {
+    .section14{
+        padding: 0;
+    }
+    .contact-form {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .xx, .yy {
+      max-width: 100%;
+    }
+    .xx{
+        padding: 10px;
+    }
+    .contact-info{
+        padding-bottom: 20px;
+    }
+  } 
 .up{
   position: fixed;
   bottom: 15px;
@@ -794,102 +807,7 @@ button.next {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
 }
-/* section 15 style */
-/* .section15 {
-    padding: 20px;
-    background-color: #f9f9f9;
-}
 
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.column {
-    flex: 1;
-    min-width: 280px;
-    max-width: 33%;
-    box-sizing: border-box;
-}
-
-.text-wrapper {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 300px;
-    border: 0;
-}
-
-.frame-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.frame-3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.text-wrapper-2 {
-    text-decoration: none;
-    color: #333;
-}
-
-.text-wrapper-2.active {
-    font-weight: bold;
-}
-
-.caret-left {
-    width: 16px;
-    height: 16px;
-}
-
-.law-office-info {
-    flex: 1 100%;
-    margin-top: 20px;
-}
-
-.law-office-info p {
-    margin: 0 0 20px 0;
-    line-height: 1.6;
-}
-
-.social-icons a {
-    margin: 0 5px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-}
-
-.logo-container img {
-    width: 100px;
-}
-
-@media (max-width: 768px) {
-    .column {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .law-office-info p {
-        font-size: 14px;
-    }
-
-    .logo-container img {
-        width: 80px;
-    }
-} */
  .section15 a{
     text-decoration: none;
     color: gray;
@@ -971,6 +889,9 @@ button.next {
         </div>
       </div>
       <header class="header">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
         <button
           class="button"
           onclick="window.location.href='consultation.html';"
@@ -991,10 +912,8 @@ button.next {
         <div class="image-wrapper">
           <img class="image" src="img/1.png" alt="Logo" />
         </div>
-        <div class="menu-icon" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
-        <div class="dropdown-menu">
+        
+        <div class="dropdown-menu menuu" style="z-index: 1000; background-color: #003366; color: white;">
           <a href="contact.html" class="dropdown-item">تواصل معنا</a>
           <a href="contract.html" class="dropdown-item">إجراءات التعاقد</a>
           <a href="success-stories.html" class="dropdown-item"
@@ -1090,7 +1009,7 @@ button.next {
       <div class="section4Left">
         <img class="img" src="img/frame-1-1.svg" width="140px" height="140px" />
       </div>
-      <p class="text-wrapper-8 section4Right" style="width: 38%;display: inline-block; align-items: center; margin-top: 8px;">
+      <p class="text-wrapper-8 section4Right" style="width: 52%;display: inline-block; align-items: center; margin-top: 8px; text-align: center;">
         إدراكاً منا لعظمة المهنة التي نعمل بها والرسالة المكلفين بإيصالها كوننا
         حاملي راية الدفاع عن الحقوق، قمنا بإنشاء مكتب المحامية نوال البكري
         للمحاماة والاستشارات القانونية. بفضل نخبة من المحامين والمستشارين
@@ -1166,8 +1085,10 @@ button.next {
 <div class="section7">
   <div class="frame-22">
       <div class="frame-17">
-          <div class="text-wrapper-9 " style="text-align: right; margin-bottom: 10px;">خدماتنا القانونية</div>
-          <!-- <div class="rectangle-3"></div> -->
+        <div style="display: flex; flex-direction: column;">
+            <h3 class="text-wrapper-9 " style="text-align: right; margin-bottom: 10px;">خدماتنا القانونية</h3>
+            <div style="width: 50px; background-color: #003366; height: 5px; align-self: flex-end;"></div>
+        </div>
       </div>
       <p class="text-wrapper-15">:نوفر مجموعة شاملة من الخدمات القانونية التي تشمل</p>
   </div>
@@ -1541,45 +1462,107 @@ button.next {
       </div>
   </div>
 </div>
-<div class="section14 four">
-  <div class="contact-form xx" dir="rtl">
-      <div class="form-group">
-          <label for="companyName">اسم الشركه </label>
-          <input type="text" id="companyName" placeholder=" اسمك الشركه">
-      </div>
-      <div class="form-group">
-          <label for="full-name">الاسم الكامل</label>
-          <input type="text" id="fullName" placeholder="ادخل اسمك كاملا">
-      </div>
-      <div class="form-group">
-          <label for="email">البريد الإلكتروني</label>
-          <input type="email" id="email" placeholder="ادخل البريد الإلكتروني">
-      </div>
-      <div class="form-group">
-          <label for="phone">رقم الهاتف</label>
-          <input type="tel" id="phone" placeholder="ادخل رقم الهاتف">
-      </div>
-      <div class="form-group">
-          <label for="service">اختيار نوع الخدمة</label>
-          <select id="service">
-              <option>اختر نوع الخدمة</option>
+<div class="section14 four my-5" style="background-color: rgb(250, 247, 247);">
+    <div class="contact-form "  dir="rtl">
+      
+      <div class="xx" style="flex: 1;">
+        <div class="form-group" style="margin-bottom: 15px;">
+          <label for="full-name" style="display: block;">الاسم الكامل</label>
+          <input type="text" id="fullName" placeholder="ادخل اسمك كاملا" style="width: 100%; padding: 10px;">
+        </div>
+        <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+          <div class="form-group" style="flex: 1;">
+            <label for="phone" style="display: block;">رقم الهاتف</label>
+            <input type="tel" id="phone" placeholder="ادخل رقم الهاتف" style="width: 100%; padding: 10px; text-align: end;">
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label for="email" style="display: block;">البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="ادخل البريد الإلكتروني" style="width: 100%; padding: 10px;">
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+          <label for="service" style="display: block;">اختيار نوع الخدمة</label>
+          <select id="service" style="width: 100%; padding: 10px;">
+            <option value="" disabled selected>اختر نوع الخدمة</option>
+            <option value="general-legal-consultation">استشارات قانونية عامة</option>
+            <option value="court-representation">تمثيل قانوني أمام المحاكم</option>
+            <option value="contract-drafting">صياغة العقود والاتفاقيات</option>
+            <option value="corporate-legal-consultation">الاستشارات القانونية للشركات</option>
+            <option value="commercial-cases">القضايا التجارية</option>
+            <option value="criminal-cases">القضايا الجنائية</option>
+            <option value="civil-cases">القضايا المدنية</option>
+            <option value="personal-status-cases">قضايا الأحوال الشخصية</option>
+            <option value="administrative-cases">القضايا الإدارية</option>
+            <option value="labor-cases">استشارات قانونية في قضايا العمل والعمال</option>
+            <option value="other">أخرى</option>
           </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+          <label for="subject" style="display: block;">عنوان الموضوع</label>
+          <input type="text" id="subject" placeholder="ادخل عنوان الموضوع" style="width: 100%; padding: 10px;">
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+          <label for="message" style="display: block;">رسالة الموضوع</label>
+          <textarea id="message" placeholder="اكتب الرسالة" style="width: 100%; padding: 10px; height: 100px;"></textarea>
+        </div>
+        <button type="submit" id="submitButton" >ارسال</button>
       </div>
-      <div class="form-group">
-          <label for="subject">عنوان الموضوع</label>
-          <input type="text" id="subject" placeholder="ادخل عنوان الموضوع">
+      
+      
+      <div class="yy contact-info" style="flex: 1;  background-color: #1D2D50; color: white; padding-right: 50px; padding-top: 40px; border-radius: 10px;" dir="rtl">
+        <div id="contact" class="contact-header" style=" font-weight: bold; margin-bottom: 20px; font-size: 30px;">تواصلوا معنا</div>
+        <div class="contact-item d-flex gap-3" style="margin-bottom: 15px;">
+           
+            <img src="img/MapPin.svg" alt="Location Icon" style="width: 20px; height: 20px;">
+           
+         <div>
+            <h3>العنوان:</h3>
+            <p style="color: rgb(163, 160, 160); font-size: 15px;">شارع النخبة، حي النخبة، الرياض، المملكة العربية السعودية</p>
+         </div>
+         
+        </div>
+       <div class="d-flex gap-5" >
+        <div class="contact-item d-flex gap-2" style="margin-bottom: 15px;">
+            <img src="img/PhoneCall.svg" alt="Phone Icon" style="width: 20px; height: 20px;">
+            <div>
+                <h4>رقم الهاتف:</h4>
+               <a style="text-decoration: none; color: rgb(163, 160, 160); font-size: 15px;" href="tel:+966551161140">966 551 161 140+</a>
+            </div>
+           
+          </div>
+          <div class="contact-item d-flex gap-2" style="margin-bottom: 15px;">
+            <img src="img/DeviceMobileCamera.svg" alt="Mobile Icon" style="width: 20px; height: 20px;">
+           <div>
+            <h4>رقم الجوال:</h4>
+            <a style="text-decoration: none; color: rgb(163, 160, 160); font-size: 15px;" href="tel:+966559420377">966 559 420 377+</a>
+           </div>
+            
+          </div>
+       </div>
+        <div class="contact-item d-flex gap-2"  style="margin-bottom: 15px;">
+            <img src="img/EnvelopeSimple.svg" alt="Email Icon" style="width: 20px; height: 20px;">
+          <div>
+            <h4>البريد الالكتروني:</h4>
+          <a style="text-decoration: none; color: rgb(163, 160, 160); font-size: 15px;" href="mailto:info@nawal-lawyer.com">info@nawal-lawyer.com</a>
+          </div>
+          
+        </div>
+        <div class="contact-header" style="margin-top: 20px; margin-bottom: 10px; font-size: 18px;">تابعنا على منصات التواصل الاجتماعي</div>
+        <div style="display: flex; gap: 10px;">
+          <a href="https://www.snapchat.com/add/thelawyernawal" target="_blank" class="social-icon">
+            <i class="fab fa-snapchat" style="font-size: 24px; color: white;"></i>
+          </a>
+          <a href="https://www.tiktok.com/@lawyer.na" target="_blank" class="social-icon">
+            <i class="fab fa-tiktok" style="font-size: 24px; color: white;"></i>
+          </a>
+        </div>
       </div>
-      <div class="form-group">
-          <label for="message">رسالة الموضوع</label>
-          <textarea id="message" placeholder="اكتب الرسالة"></textarea>
-      </div>
-      <button type="submit" id="submitButton">ارسال</button>
-  </div>     
-  <div class="social-media yy">
-      <img src="img/frame-46.png" alt="Social Media Icons">
+    </div>
   </div>
-</div>
-<div class="section15 me-5">
+  
+ 
+
+<div class="section15 mt-5 py-5" style="background-color: rgb(250, 247, 247);padding-right: 25px;">
     <div class="content gap-3 d-flex" style="flex-direction: row-reverse; flex-wrap: wrap;">
         <div class="logo-container">
             <img src="img/1.png" alt="Law Office Logo" width="60px" height="60px">
